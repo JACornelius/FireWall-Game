@@ -6,7 +6,7 @@ public class Packet : MonoBehaviour {
     public string ipaddr;
     public int portnum;
     public bool safebool;
-    public GameObject furnaceGO;
+    //public GameObject furnaceGO;
     //public GameObject packet;
     // Use this for initialization
     public void info(string IP, int port, bool safe)
@@ -18,7 +18,7 @@ public class Packet : MonoBehaviour {
 
     void Update()
     {
-        SpriteRenderer spriteFurnace = furnaceGO.GetComponent<SpriteRenderer>();
+        SpriteRenderer spriteFurnace = GameObject.Find("furnace").GetComponent<SpriteRenderer>();
         float rightF = spriteFurnace.bounds.extents.x; //Distance to the right side, from your center point
         float leftF = -spriteFurnace.bounds.extents.x; //Distance to the left side
         float topF = spriteFurnace.bounds.extents.y; //Distance to the top
